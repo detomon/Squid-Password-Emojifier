@@ -1,0 +1,8 @@
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=permanent,L]
+
+Order Deny,Allow
+Deny from all
+Allow from 85.195.226.218
+Allow from 85.195.226.219
